@@ -1,0 +1,6 @@
+<%= turbo_stream.replace "abcs-list" do %>
+  <%= render partial: "list" %>
+<% end %>
+<%= turbo_stream.replace "flash-messages" do %>
+  <%= render partial: "flash_messages" %>
+<% end %>
