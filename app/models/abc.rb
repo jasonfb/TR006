@@ -9,3 +9,5 @@ class Abc < ApplicationRecord
   end
 
 end
+
+

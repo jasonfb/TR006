@@ -1,0 +1,16 @@
+<%= turbo_frame_tag "abcs-list" do %>
+  <div class="container-fluid table">
+    <div class="row">
+      <div class="col">Name</div>
+    </div>
+    <div>
+      <% if @abcs.empty? %>
+        None
+      <% end %>
+      <% @abcs.each do |abc| %>
+        <%= render partial: 'line', locals: {abc: abc} %>
+      <% end %>
+    </div>
+
+  </div>
+<% end %>

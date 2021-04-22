@@ -1,0 +1,15 @@
+<div class="row" data-id="#{abc.id}">
+  <div class="col">
+    <%= abc.name %>
+  </div>
+  <div class="col">
+    <%= form_for :abc, url: abc_path(abc), method: "put" do |f| %>
+      <%= f.hidden_field "_action", value: "reject" %>
+      <%= f.submit "Reject",  disable_with: "Loading...", class: " btn btn-danger pull-right btn-sm" %>
+    <% end %>
+    <%= form_for :abc, url: abc_path(abc),  method: "put"  do |f| %>
+      <%= f.hidden_field "_action", value: "accept" %>
+      <%= f.submit "Accept",  disable_with: "Loading...", class: " btn btn-primary pull-right btn-sm" %>
+    <% end %>
+  </div>
+</div>
